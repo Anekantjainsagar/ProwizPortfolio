@@ -4,14 +4,23 @@ import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 import { LuEyeOff, LuEye } from "react-icons/lu";
 import logo from "@/app/Assets/prowiz.png";
+import toast, { Toaster } from "react-hot-toast";
 
 const App = () => {
+  let passwords = {
+    email: "Prowiz",
+    password: "Prowiz@123",
+  };
   const history = useRouter();
-  const [showPassword, setShowPassword] = useState(false);
-  const [user, setUser] = useState({ email: "", password: "" });
+  const [showPassword, setShowPassword] = useState(true);
+  const [user, setUser] = useState({
+    email: passwords?.email,
+    password: passwords?.password,
+  });
 
   return (
     <div className="flex h-screen bg-darkPurple">
+      <Toaster />
       <div className="w-6/12 p-10 flex flex-col items-start justify-between h-full">
         <Image
           src={logo}
@@ -29,7 +38,7 @@ const App = () => {
               htmlFor="email"
               className="mb-1.5 text-sm min-[1600px]:text-base"
             >
-              Email
+              Username
             </label>
             <input
               id="email"
@@ -38,7 +47,7 @@ const App = () => {
                 setUser({ ...user, email: e.target.value });
               }}
               type="text"
-              placeholder="Enter Email"
+              placeholder="Enter Username"
               className="bg-transparent w-8/12 outline-none border border-gray-300 px-4 py-2 rounded-lg min-[1600px]:text-lg"
             />
           </div>
@@ -57,10 +66,10 @@ const App = () => {
                 setUser({ ...user, password: e.target.value });
               }}
               placeholder="Enter Password"
-              className="bg-transparent w-full outline-none border border-gray-300 px-4 py-2 rounded-lg min-[1600px]:text-lg"
+              className="bg-transparent w-full outline-none border text-white border-gray-300 px-4 py-2 rounded-lg min-[1600px]:text-lg"
             />
             <div
-              className="absolute top-1/2 -translate-y-1/2 text-gray-500 right-4 text-lg min-[1600px]:text-2xl cursor-pointer"
+              className="absolute top-1/2 -translate-y-1/2 text-gray-100 right-4 text-lg min-[1600px]:text-2xl cursor-pointer"
               onClick={(e) => {
                 e.preventDefault();
                 setShowPassword(!showPassword);
@@ -72,7 +81,14 @@ const App = () => {
           <button
             onClick={(e) => {
               e.preventDefault();
-              history.push("/home");
+              if (
+                user?.email === passwords?.email &&
+                user?.password == passwords?.password
+              ) {
+                history.push("/home");
+              } else {
+                toast.error("Invalid Credentials");
+              }
             }}
             className="text-white bg-newBlue mt-8 w-8/12 py-2.5 min-[1600px]:py-3 min-[1600px]:text-xl font-semibold rounded-lg"
           >

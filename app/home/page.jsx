@@ -11,9 +11,9 @@ const Home = () => {
   return (
     <div className="flex bg-darkPurple">
       <Leftbar />
-      <div className="w-[84%]">
+      <div className="dashboard-width">
         <Sidebar />
-        <div className="grid grid-cols-3 gap-5 py-4 px-5">
+        <div className="grid grid-cols-2 gap-5 py-4 px-5">
           {[
             { title: "Tableau", icon: <SiTableau /> },
             {
@@ -49,7 +49,7 @@ const Block = ({ data }) => {
       }}
       className="text-white bg-gray-700/10 px-4 py-4 rounded-lg shadow-lg shadow-gray-600/10"
     >
-      <h4 className="flex items-center gap-x-2 text-lg">
+      <h4 className="flex items-center gap-x-2 text-lg font-medium">
         <span className="text-2xl">{data?.icon}</span>
         {data?.title} Overview
       </h4>
