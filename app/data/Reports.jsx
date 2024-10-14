@@ -86,6 +86,8 @@ export const tableuReports = [
   {
     title: "Retail Sales Analytics",
     link: "https://public.tableau.com/views/RetailSalesAnalytics_16919140330630/ExecutiveSummaryDashboard3?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link",
+    headings: [{ images: "" }],
+    type:"tableu"
   },
 ];
 
@@ -188,6 +190,137 @@ export const figmaReports = [
     headings: [
       {
         images: "/Figma/Thumbnails/Youtube Analytics.jpg",
+      },
+    ],
+  },
+  {
+    title: "Loyalty Tracker Dashboard",
+    link: "/Figma/Loyalty Tracker Dashboard.pdf",
+    type: "pdf",
+    headings: [
+      {
+        images: "/Figma/Thumbnails/Loyalty Tracker Dashboard.jpg",
+      },
+    ],
+  },
+  {
+    title: "Website Overview Dashboard",
+    link: "/Figma/Website Overview Dashboard.pdf",
+    type: "pdf",
+    headings: [
+      {
+        images: "/Figma/Thumbnails/Website Overview Dashboard.jpg",
+      },
+    ],
+  },
+  {
+    title: "Finance Dashboard v1",
+    link: "/Figma/Finance Dashboard v1.pdf",
+    type: "pdf",
+    headings: [
+      {
+        images: "/Figma/Thumbnails/Finance Dashboard v1.png",
+      },
+    ],
+  },
+  {
+    title: "Financial Dashboard",
+    link: "/Figma/Financial Dashboard.pdf",
+    type: "pdf",
+    headings: [
+      {
+        images: "/Figma/Thumbnails/Financial Dashboard.png",
+      },
+    ],
+  },
+  {
+    title: "Healthcare Investment ROI",
+    link: "/Figma/Healthcare Investment ROI.pdf",
+    type: "pdf",
+    headings: [
+      {
+        images: "/Figma/Thumbnails/Healthcare Investment ROI.png",
+      },
+    ],
+  },
+  {
+    title: "HR Dashboard",
+    link: "/Figma/HR Dashboard.pdf",
+    type: "pdf",
+    headings: [
+      {
+        images: "/Figma/Thumbnails/HR Dashboard.png",
+      },
+    ],
+  },
+  {
+    title: "Inventory Sourcing",
+    link: "/Figma/Inventory Sourcing.pdf",
+    type: "pdf",
+    headings: [
+      {
+        images: "/Figma/Thumbnails/Inventory Sourcing.png",
+      },
+    ],
+  },
+  {
+    title: "Manufacturing - Management Information Dashboard",
+    link: "/Figma/Manufacturing - Management Information Dashboard.pdf",
+    type: "pdf",
+    headings: [
+      {
+        images:
+          "/Figma/Thumbnails/Manufacturing - Management Information Dashboard.png",
+      },
+    ],
+  },
+  {
+    title: "Marketing Funnel",
+    link: "/Figma/Marketing Funnel.pdf",
+    type: "pdf",
+    headings: [
+      {
+        images: "/Figma/Thumbnails/Marketing Funnel.png",
+      },
+    ],
+  },
+  {
+    title: "Retail Sales",
+    link: "/Figma/Retail Sales.pdf",
+    type: "pdf",
+    headings: [
+      {
+        images: "/Figma/Thumbnails/Retail Sales.png",
+      },
+    ],
+  },
+  {
+    title: "SaaS Dashboard",
+    link: "/Figma/SaaS Dashboard.pdf",
+    type: "pdf",
+    headings: [
+      {
+        images: "/Figma/Thumbnails/SaaS Dashboard.png",
+      },
+    ],
+  },
+  {
+    title: "Sales Overview",
+    link: "/Figma/Sales Overview.pdf",
+    type: "pdf",
+    headings: [
+      {
+        images: "/Figma/Thumbnails/Sales Overview.png",
+      },
+    ],
+  },
+  {
+    title: "Survey",
+    link: "/Figma/Survey.pdf",
+    type: "pdf",
+    headings: [
+      {
+        images: "/Figma/Thumbnails/Survey.png",
       },
     ],
   },

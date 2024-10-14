@@ -12,7 +12,7 @@ const AiAgents = () => {
     const source = document.createElement("source");
     source.src = "/Inbillz.mp4";
     let videoElement = document.getElementById("video-container");
-    if (!videoElement.innerHTML.includes("Why-consciousleap")) {
+    if (!videoElement.innerHTML.includes("Inbillz")) {
       video.appendChild(source);
       document.getElementById("video-container").appendChild(video);
     }
