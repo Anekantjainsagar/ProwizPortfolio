@@ -1,31 +1,45 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { reportsData } from "@/app/data/Reports";
 import Leftbar from "@/app/Components/Leftbar";
+import { mainData } from "@/app/data/main";
+import { EmbedPDF } from "@simplepdf/react-embed-pdf";
 
 const ViewLive = ({ params }) => {
   const [data, setData] = useState();
   const { dashboard, name } = params;
 
   useEffect(() => {
-    let temp = reportsData?.find((e) => {
+    let temp = mainData?.find(
+      (e, i) => e?.title?.toLowerCase()?.replaceAll(" ", "-") == name
+    );
+    temp = temp?.reports?.find((e) => {
       return e?.title?.toLowerCase()?.replaceAll(" ", "-") === dashboard;
     });
     setData(temp);
-  }, [dashboard, reportsData]);
+  }, [name, dashboard]);
 
   return (
     <div className="flex bg-darkPurple">
-      <Leftbar showDashboards={true} name={name} />
-      <div className="dashboard-width">
-        <iframe
-          src={data?.link}
-          frameBorder="0"
-          style={{ border: "none" }}
-          className="w-full h-[100vh]"
-          allowfullscreen
-          sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"
-        ></iframe>
+      <Leftbar />
+      <div className="dashboard-width h-[100vh] overflow-hidden">
+        {data?.type == "pdf" ? (
+          <>
+            <EmbedPDF
+              mode="inline"
+              style={{ width: "100%", height: "100%" }}
+              documentURL={data?.link}
+            />
+          </>
+        ) : (
+          <iframe
+            src={data?.link}
+            frameBorder="0"
+            style={{ border: "none" }}
+            className="w-full h-[100vh]"
+            allowFullScreen={true}
+            sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"
+          ></iframe>
+        )}
       </div>
     </div>
   );

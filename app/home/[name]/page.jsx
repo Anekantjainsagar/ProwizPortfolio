@@ -2,13 +2,21 @@
 import Leftbar from "@/app/Components/Leftbar";
 import Sidebar from "@/app/Components/Sidebar";
 import { useRouter } from "next/navigation";
-import React, { useState } from "react";
-import { reportsData } from "@/app/data/Reports";
+import React, { useEffect, useState } from "react";
+import { mainData } from "@/app/data/main";
 
 const Reports = ({ params }) => {
   const { name } = params;
   const history = useRouter();
   const [search, setSearch] = useState("");
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    let temp = mainData?.find(
+      (e, i) => e?.title?.toLowerCase()?.replaceAll(" ", "-") == name
+    );
+    setData(temp.reports);
+  }, [name]);
 
   return (
     <div className="flex bg-darkPurple">
@@ -27,7 +35,7 @@ const Reports = ({ params }) => {
             />
           </div>
           <div className="grid grid-cols-3 gap-y-10 gap-x-6 mt-4 overflow-y-auto h-[82vh] pr-5">
-            {reportsData
+            {data
               ?.filter((e, i) => {
                 if (search.trim()) {
                   return e?.title

@@ -1,11 +1,9 @@
 "use client";
 import React from "react";
-
 import Leftbar from "../Components/Leftbar";
 import Sidebar from "../Components/Sidebar";
-import { FaFigma } from "react-icons/fa";
-import { SiTableau, SiPowerbi, SiLooker } from "react-icons/si";
 import { useRouter } from "next/navigation";
+import { mainData } from "../data/main";
 
 const Home = () => {
   return (
@@ -14,21 +12,7 @@ const Home = () => {
       <div className="dashboard-width">
         <Sidebar />
         <div className="grid grid-cols-2 gap-5 py-4 px-5">
-          {[
-            { title: "Tableau", icon: <SiTableau /> },
-            {
-              title: "PowerBI",
-              icon: <SiPowerbi />,
-            },
-            {
-              title: "Looker Studio",
-              icon: <SiLooker />,
-            },
-            {
-              title: "Figma Mock-ups",
-              icon: <FaFigma />,
-            },
-          ].map((e, i) => {
+          {mainData.map((e, i) => {
             return <Block key={i} data={e} />;
           })}
         </div>
