@@ -22,8 +22,8 @@ const AiAgents = () => {
           <p className="text-lg text-gray-200 text-center w-8/12 mx-auto mt-2 leading-[27px] tracking-wide">
             We have assembled a team of Data Engineers, Business Intelligence
             Experts and Al Specialists each of whom have spent the proverbial
-            "10,000 hours" to master their craft and bring together valuable
-            experience from different domains and business sizes.
+            &quot;10,000 hours&quot; to master their craft and bring together
+            valuable experience from different domains and business sizes.
           </p>
           <h4 className="text-center text-4xl font-semibold mt-12">
             Meet Our Leadership Team
