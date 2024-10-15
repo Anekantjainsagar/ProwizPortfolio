@@ -10,6 +10,7 @@ module.exports = {
       colors: {
         darkPurple: "#030021",
         newBlue: "#0155FB",
+        gradientMain: "#030636",
       },
     },
   },

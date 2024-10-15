@@ -15,7 +15,7 @@ const Reports = ({ params }) => {
     let temp = mainData?.find(
       (e, i) => e?.title?.toLowerCase()?.replaceAll(" ", "-") == name
     );
-    setData(temp.reports);
+    setData(temp);
   }, [name]);
 
   return (
@@ -24,7 +24,10 @@ const Reports = ({ params }) => {
       <div className="dashboard-width">
         <Sidebar />
         <div className="pt-6 px-6">
-          <div className="w-full flex justify-end">
+          <div className="w-full flex justify-between">
+            <h5 className="text-white text-3xl font-semibold">
+              {data?.title} {data?.title != "Figma Mock-ups" && "Dashboards"}
+            </h5>
             <input
               type="search"
               value={search}
@@ -35,7 +38,7 @@ const Reports = ({ params }) => {
             />
           </div>
           <div className="grid grid-cols-3 gap-y-10 gap-x-6 mt-4 overflow-y-auto h-[82vh] pr-5">
-            {data
+            {data?.reports
               ?.filter((e, i) => {
                 if (search.trim()) {
                   return e?.title

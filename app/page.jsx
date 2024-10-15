@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { LuEyeOff, LuEye } from "react-icons/lu";
 import logo from "@/app/Assets/prowiz.png";
 import toast, { Toaster } from "react-hot-toast";
@@ -12,11 +12,25 @@ const App = () => {
     password: "Prowiz@123",
   };
   const history = useRouter();
-  const [showPassword, setShowPassword] = useState(true);
+  const [showPassword, setShowPassword] = useState(false);
   const [user, setUser] = useState({
     email: passwords?.email,
     password: passwords?.password,
   });
+
+    useEffect(() => {
+      const video = document.createElement("video");
+      video.autoplay = true;
+      video.muted = true;
+      video.controls = false;
+      const source = document.createElement("source");
+      source.src = "/main-video.mp4";
+      let videoElement = document.getElementById(`video-container`);
+      if (!videoElement.innerHTML.includes("main-video")) {
+        video.appendChild(source);
+        document.getElementById(`video-container`).appendChild(video);
+      }
+    }, []);
 
   return (
     <div className="flex h-screen bg-darkPurple">
@@ -30,10 +44,14 @@ const App = () => {
           className="w-[10vw] invert"
         />
         <div className="w-full px-2">
-          <h2 className="text-white text-3xl min-[1600px]:text-4xl font-semibold">
-            Login to continue
+          <h2 className="text-white text-5xl leading-[60px] font-semibold">
+            Welcome to <br />
+            Prowiz Analytics Portfolio
           </h2>{" "}
-          <div className="flex flex-col my-6 text-gray-200">
+          <h6 className="text-gray-300 text-2xl mt-3 mb-9">
+            Please login here to continue
+          </h6>
+          <div className="flex flex-col my-5 text-gray-200">
             <label
               htmlFor="email"
               className="mb-1.5 text-sm min-[1600px]:text-base"
@@ -97,7 +115,18 @@ const App = () => {
         </div>
         <div className="py-10"></div>
       </div>
-      <div className="w-6/12 bg-gray-900"></div>
+      <div className="w-6/12 relative p-[3vw] flex flex-col items-center justify-between bg-gradient-to-br from-gradientMain/50 from-[50%] to-black/50 h-full">
+        <div className="w-11/12 flex items-center justify-center min-[1600px]:mt-0 mt-10">
+          <div id={`video-container`} className="rounded-[15px]"></div>
+        </div>
+        <Image
+          src="/login bg.png"
+          alt="Login bg"
+          width={1000}
+          height={1000}
+          className="absolute top-0 left-0 object-cover w-full h-full"
+        />
+      </div>
     </div>
   );
 };

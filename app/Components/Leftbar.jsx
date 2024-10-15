@@ -7,6 +7,7 @@ import { usePathname, useRouter } from "next/navigation";
 import { RiRobot2Line } from "react-icons/ri";
 import { CiLogout } from "react-icons/ci";
 import { IoIosInformationCircleOutline } from "react-icons/io";
+import { GoDotFill } from "react-icons/go";
 import { mainData } from "../data/main";
 
 const Leftbar = () => {
@@ -51,28 +52,29 @@ const Leftbar = () => {
                   <span className="text-2xl">{e?.icon}</span>
                   <p>{e?.title}</p>
                 </div>
-                {e?.routes?.map((data, i) => {
-                  return (
-                    <div
-                      onClick={() => {
-                        history.push(
-                          `/home/${data?.title
-                            ?.toLowerCase()
-                            ?.replaceAll(" ", "-")}`
-                        );
-                      }}
-                      key={i}
-                      className={`text-gray-200 px-4 py-2 hover:bg-gray-500/15 cursor-pointer rounded-lg flex items-center gap-x-2 ml-2 ${pathname?.includes(
-                        data?.title?.toLowerCase()?.replaceAll(" ", "-")
-                          ? "bg-gray-500/15"
-                          : ""
-                      )}`}
-                    >
-                      {data?.title}{" "}
-                      {data?.title != "Figma Mock-ups" && "Dashboards"}
-                    </div>
-                  );
-                })}
+                {pathname != "/home" &&
+                  e?.routes?.map((data, i) => {
+                    return (
+                      <div
+                        onClick={() => {
+                          history.push(
+                            `/home/${data?.title
+                              ?.toLowerCase()
+                              ?.replaceAll(" ", "-")}`
+                          );
+                        }}
+                        key={i}
+                        className={`text-gray-200 px-4 py-2 hover:bg-gray-500/15 ml-1 cursor-pointer rounded-lg flex items-center gap-x-2 ${pathname?.includes(
+                          data?.title?.toLowerCase()?.replaceAll(" ", "-")
+                            ? "bg-gray-500/15"
+                            : ""
+                        )}`}
+                      >
+                        <GoDotFill /> {data?.title}{" "}
+                        {data?.title != "Figma Mock-ups" && "Dashboards"}
+                      </div>
+                    );
+                  })}
               </div>
             );
           })}
