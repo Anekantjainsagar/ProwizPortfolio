@@ -20,9 +20,9 @@ const App = () => {
 
     useEffect(() => {
       const video = document.createElement("video");
-      video.autoplay = true;
+      video.autoplay = false;
       video.muted = true;
-      video.controls = false;
+      video.controls = true;
       const source = document.createElement("source");
       source.src = "/main-video.mp4";
       let videoElement = document.getElementById(`video-container`);
@@ -116,7 +116,7 @@ const App = () => {
         <div className="py-10"></div>
       </div>
       <div className="w-6/12 relative p-[3vw] flex flex-col items-center justify-center bg-gradient-to-br from-gradientMain/50 from-[50%] to-black/50 h-full">
-        <div className="w-11/12 flex items-center justify-center rounded-sm bg-white p-8">
+        <div className="w-11/12 flex items-center justify-center rounded-[10px] bg-white p-8">
           <div id={`video-container`} className="shadow-xl shadow-gray-400"></div>
         </div>
         <Image
