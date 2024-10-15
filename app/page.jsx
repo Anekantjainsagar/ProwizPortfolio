@@ -115,9 +115,9 @@ const App = () => {
         </div>
         <div className="py-10"></div>
       </div>
-      <div className="w-6/12 relative p-[3vw] flex flex-col items-center justify-between bg-gradient-to-br from-gradientMain/50 from-[50%] to-black/50 h-full">
-        <div className="w-11/12 flex items-center justify-center min-[1600px]:mt-0 mt-10">
-          <div id={`video-container`} className="rounded-[15px]"></div>
+      <div className="w-6/12 relative p-[3vw] flex flex-col items-center justify-center bg-gradient-to-br from-gradientMain/50 from-[50%] to-black/50 h-full">
+        <div className="w-11/12 flex items-center justify-center rounded-sm bg-white p-8">
+          <div id={`video-container`} className="shadow-xl shadow-gray-400"></div>
         </div>
         <Image
           src="/login bg.png"
