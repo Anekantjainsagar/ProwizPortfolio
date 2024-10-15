@@ -95,6 +95,54 @@ export const tableuReports = [
     headings: [{ images: "/Tableu/Loan Overview.png" }],
     type: "tableu",
   },
+  {
+    title: "Hospital Patient Care Analytics",
+    link: "https://public.tableau.com/views/HospitalPatientCareAnalytics/HospitalPatientActivity?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link",
+    headings: [{ images: "/Tableu/Hospital Patient Care Analytics.png" }],
+    type: "tableu",
+  },
+  {
+    title: "Performance Marketing Analytics",
+    link: "https://public.tableau.com/views/PerformanceMarketingAnalytics/WebAnalyticsT1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link",
+    headings: [{ images: "/Tableu/Performance Marketing Analytics.png" }],
+    type: "tableu",
+  },
+  {
+    title: "Financial Metrics Analytics",
+    link: "https://public.tableau.com/views/FinancialMetricsAnalytics/BalanceSheetDashboard?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link",
+    headings: [{ images: "/Tableu/Financial Metrics Analytics.png" }],
+    type: "tableu",
+  },
+  {
+    title: "Social Media Analytics - Youtube",
+    link: "https://public.tableau.com/views/SocialMediaAnalytics-Youtube/ChannelOverview?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link",
+    headings: [{ images: "/Tableu/Social Media Analytics - Youtube.png" }],
+    type: "tableu",
+  },
+  {
+    title: "Ecommerce Analytics",
+    link: "https://public.tableau.com/views/EcommerceAnalytics_16919323645150/EcommerceSales_Feb17?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link",
+    headings: [{ images: "/Tableu/Ecommerce Analytics.png" }],
+    type: "tableu",
+  },
+  {
+    title: "Progression of Covid-19 Pandemic",
+    link: "https://public.tableau.com/views/ProgressionofCovid-19Pandemic/Summary?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link",
+    headings: [{ images: "/Tableu/Progression of Covid-19 Pandemic.png" }],
+    type: "tableu",
+  },
+  {
+    title: "SaaS Subscription KPIs",
+    link: "https://public.tableau.com/views/SaaSSubscriptionKPIs/ExecutiveDashboard?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link",
+    headings: [{ images: "/Tableu/SaaS Subscription KPIs.png" }],
+    type: "tableu",
+  },
+  {
+    title: "Global Compensation Overview",
+    link: "https://public.tableau.com/views/GlobalCompensationOverview_16578632575450/GlobalCompensationOverview?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link",
+    headings: [{ images: "/Tableu/Global Compensation Overview.png" }],
+    type: "tableu",
+  },
 ];
 
 export const figmaReports = [

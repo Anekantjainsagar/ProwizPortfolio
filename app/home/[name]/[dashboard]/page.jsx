@@ -19,7 +19,7 @@ const ViewLive = ({ params }) => {
     });
     setData(temp);
     setUrl(temp?.link);
-  }, [name, dashboard]);
+  }, [name]);
 
   useEffect(() => {
     const loadTableauScript = () => {
@@ -82,6 +82,7 @@ const ViewLive = ({ params }) => {
 const setVizStyle = {
   width: "100%",
   height: "100%",
+  magin: "auto",
 };
 
 export default ViewLive;
