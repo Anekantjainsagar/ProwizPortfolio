@@ -86,8 +86,14 @@ export const tableuReports = [
   {
     title: "Retail Sales Analytics",
     link: "https://public.tableau.com/views/RetailSalesAnalytics_16919140330630/ExecutiveSummaryDashboard3?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link",
-    headings: [{ images: "" }],
-    type:"tableu"
+    headings: [{ images: "/Tableu/Retail Sales Analytics.png" }],
+    type: "tableu",
+  },
+  {
+    title: "Loan Overview",
+    link: "https://public.tableau.com/views/LoanOverview_17287213672670/FinanceDashboard?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link",
+    headings: [{ images: "/Tableu/Loan Overview.png" }],
+    type: "tableu",
   },
 ];
 

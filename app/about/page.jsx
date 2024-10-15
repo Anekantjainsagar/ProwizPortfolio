@@ -3,6 +3,7 @@ import React from "react";
 import Leftbar from "../Components/Leftbar";
 import Sidebar from "../Components/Sidebar";
 import Image from "next/image";
+import { MdOutlineEmail } from "react-icons/md";
 
 const AiAgents = () => {
   return (
@@ -11,42 +12,45 @@ const AiAgents = () => {
       <div className="dashboard-width">
         <Sidebar />
         <div className="text-white py-4 px-5 text-lg">
-          <h1 className="text-3xl font-semibold mb-4">About Us</h1>
-          <div className="px-1">
-            <p>
-              ProWiz Analytics is a leading provider of data engineering and
-              visualization solutions, dedicated to helping businesses unlock
-              the full potential of their data. With a focus on DataOps, ProWiz
-              builds robust, scalable data architectures that streamline data
-              management and enhance business intelligence capabilities. Their
-              team of experts works closely with clients to understand their
-              unique needs, creating custom solutions that simplify complex data
-              processes and provide actionable insights.
-            </p>
-            <p className="mt-2">
-              By combining advanced data transformation techniques with powerful
-              reporting and visualization tools, ProWiz enables organizations to
-              make more informed, data-driven decisions. They also integrate
-              DevOps practices to optimize development workflows and improve
-              operational efficiency. Whether it&apos;s developing interactive
-              dashboards, automating data pipelines, or building scalable
-              infrastructures, ProWiz delivers cutting-edge solutions that
-              empower businesses to stay competitive in a rapidly evolving
-              digital landscape.
-            </p>
-          </div>
-          <p className="px-1">Meet our Founder -</p>
-          <div className="flex ml-1 items-start mt-3">
-            <Image
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLe5PABjXc17cjIMOibECLM7ppDwMmiDg6Dw&s"
-              alt="User image"
-              width={1000}
-              height={1000}
-              className="w-[3.5vw] aspect-square rounded-full"
-            />
-            <div className="ml-3">
-              <h4 className="text-xl font-semibold">Rishabh Mathur</h4>
-              <p>rishabh@gmail.com</p>
+          <h4 className="text-center text-3xl font-semibold">
+            A job is worth doing together
+          </h4>
+          <p className="text-center my-2">
+            Meet the dedicated team at Loom, revolutionizing the way we farm
+            with innovative, beautiful, and sustainable solutions for the home.
+          </p>
+          <div className="flex items-center justify-evenly mt-5">
+            <div className="flex flex-col items-center justify-center">
+              <Image
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLe5PABjXc17cjIMOibECLM7ppDwMmiDg6Dw&s"
+                alt="User image"
+                width={1000}
+                height={1000}
+                className="w-[13.5vw] aspect-square rounded-full"
+              />
+              <div className="mt-2 flex flex-col items-center justify-center">
+                <h4 className="text-xl text-center font-semibold">
+                  Rishabh Mathur
+                </h4>
+                <p>Founder</p>
+                <MdOutlineEmail className="mt-1 text-xl" />
+              </div>
+            </div>
+            <div className="flex flex-col items-center justify-center">
+              <Image
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLe5PABjXc17cjIMOibECLM7ppDwMmiDg6Dw&s"
+                alt="User image"
+                width={1000}
+                height={1000}
+                className="w-[13.5vw] aspect-square rounded-full"
+              />
+              <div className="mt-2 flex flex-col items-center justify-center">
+                <h4 className="text-xl text-center font-semibold">
+                  Rishabh Mathur
+                </h4>
+                <p>Founder</p>
+                <MdOutlineEmail className="mt-1 text-xl" />
+              </div>
             </div>
           </div>
         </div>
