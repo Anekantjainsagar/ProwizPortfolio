@@ -49,7 +49,7 @@ const ViewLive = ({ params }) => {
       <div className="dashboard-width h-[100vh] overflow-y-auto">
         {data?.type == "pdf" ? (
           <>
-            <EmbedPDF
+            {/* <EmbedPDF
               mode="inline"
               style={{
                 width: "100%",
@@ -60,6 +60,13 @@ const ViewLive = ({ params }) => {
                 overflow: "hidden",
               }}
               documentURL={data?.link}
+            /> */}{" "}
+            <iframe
+              src={data?.link}
+              width="100%"
+              height="600px"
+              title="PDF Viewer"
+              className="w-full h-[100vh]"
             />
           </>
         ) : data?.type == "tableu" ? (
