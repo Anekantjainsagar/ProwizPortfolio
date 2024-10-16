@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .dashboard-width {
-  @apply w-[84%];
+  @apply w-full md:w-[84%] md:mt-0 mt-16 md:pb-0 pb-5;
 }
 
 ::-webkit-scrollbar {

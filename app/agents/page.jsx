@@ -7,9 +7,9 @@ const AiAgents = () => {
   return (
     <div className="flex bg-darkPurple">
       <Leftbar />
-      <div className="dashboard-width">
+      <div className="dashboard-width md:h-full h-[92vh]">
         <Sidebar />
-        <div className="py-4 px-5 grid grid-cols-3 gap-5">
+        <div className="py-4 px-5 grid md:grid-cols-3 gap-5 overflow-y-auto h-full">
           <Block id="1" />
           <Block id="2" />
           <Block id="3" />
@@ -37,9 +37,9 @@ const Block = ({ id }) => {
   }, []);
 
   return (
-    <div className="bg-gray-700/10 border-gray-300/20 rounded-[15px] border text-white text-xl p-4">
+    <div className="bg-gray-700/10 border-gray-300/20 rounded-[15px] border text-white min-[1600px]:text-xl p-2 md:p-4">
       <div id={`video-container${id}`} className="rounded-[15px]"></div>
-      <p className="text-center mt-3">Temporary Name</p>
+      <p className="text-center mt-4 min-[1600px]:mt-3">Temporary Name</p>
     </div>
   );
 };

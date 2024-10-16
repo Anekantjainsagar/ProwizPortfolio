@@ -23,9 +23,9 @@ const Reports = ({ params }) => {
       <Leftbar />
       <div className="dashboard-width">
         <Sidebar />
-        <div className="pt-6 px-6">
+        <div className="pt-6 px-4 md:px-6">
           <div className="w-full flex justify-between">
-            <h5 className="text-white text-3xl font-semibold">
+            <h5 className="text-white text-2xl min-[1600px]:text-3xl font-semibold">
               {data?.title} {data?.title != "Figma Mock-ups" && "Dashboards"}
             </h5>
             <input
@@ -34,10 +34,10 @@ const Reports = ({ params }) => {
               autoFocus={true}
               placeholder="Search Here...."
               onChange={(e) => setSearch(e.target.value)}
-              className="bg-gray-300/20 text-white px-5 py-1.5 w-3/12 rounded-md text-lg outline-none"
+              className="bg-gray-300/20 text-white px-5 py-1.5 w-4/12 h-fit md:w-3/12 rounded-md min-[1600px]:text-lg outline-none"
             />
           </div>
-          <div className="grid grid-cols-3 gap-y-10 gap-x-6 mt-4 overflow-y-auto h-[82vh] pr-5">
+          <div className="grid md:grid-cols-3 gap-y-10 gap-x-6 mt-4 overflow-y-auto h-[76vh] md:h-[82vh] pr-3 md:pr-5">
             {data?.reports
               ?.filter((e, i) => {
                 if (search.trim()) {
@@ -65,7 +65,7 @@ const Reports = ({ params }) => {
                       src={item?.headings[0].images}
                       alt="Image"
                     />
-                    <div className="flex justify-center pb-4 text-lg font-medium items-center">
+                    <div className="flex justify-center md:text-start px-4 text-center pb-4 min-[1600px]:text-lg font-medium items-center">
                       {item?.title}
                     </div>
                   </div>

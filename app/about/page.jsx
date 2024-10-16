@@ -8,27 +8,27 @@ import { CgWorkAlt } from "react-icons/cg";
 
 const AiAgents = () => {
   return (
-    <div className="flex bg-darkPurple">
+    <div className="flex md:flex-row flex-col bg-darkPurple">
       <Leftbar />
       <div className="dashboard-width">
         <Sidebar />
         <div className="text-white py-4 px-5 text-lg">
-          <h4 className="text-center text-3xl font-semibold w-7/12 mx-auto leading-relaxed">
+          <h4 className="text-center text-2xl min-[1600px]:text-3xl font-semibold md:w-7/12 mx-auto leading-relaxed">
             At Prowiz Analytics, we are driven by a singular mission <br />
             <span className="bg-[#0055fd]">
               to make actionable data accessible to all.
             </span>
           </h4>
-          <p className="text-lg text-gray-200 text-center w-8/12 mx-auto mt-2 leading-[27px] tracking-wide">
+          <p className="text-base min-[1600px]:text-lg text-gray-200 text-center md:w-8/12 mx-auto mt-2 leading-[27px] tracking-wide">
             We have assembled a team of Data Engineers, Business Intelligence
             Experts and Al Specialists each of whom have spent the proverbial
             &quot;10,000 hours&quot; to master their craft and bring together
             valuable experience from different domains and business sizes.
           </p>
-          <h4 className="text-center text-4xl font-semibold mt-12">
+          <h4 className="text-center text-3xl min-[1600px]:text-4xl font-semibold mt-12">
             Meet Our Leadership Team
           </h4>
-          <div className="flex items-center justify-evenly mt-8">
+          <div className="flex md:flex-row flex-col items-start md:px-0 px-1 gap-y-5 md:items-center justify-evenly mt-8">
             <User name="Rishabh Mathur" email="Rishabh@prowiz.io" />
             <User name="Varun Sethi" email="Varun@prowiz.io" />
           </div>
@@ -46,21 +46,21 @@ const User = ({ name, email }) => {
         alt="User image"
         width={1000}
         height={1000}
-        className="w-[7.5vw] aspect-square rounded-full"
+        className="w-[30vw] md:w-[7.5vw] aspect-square rounded-full"
       />
       <div className="ml-4">
-        <h4 className="text-3xl font-semibold">{name}</h4>
+        <h4 className="text-2xl min-[1600px]:text-3xl font-semibold">{name}</h4>
 
-        <div className="flex items-center gap-x-2">
-          <CgWorkAlt className="mt-1 text-xl" />
+        <div className="flex items-center gap-x-2 text-base min-[1600px]:text-lg">
+          <CgWorkAlt className="mt-1 min-[1600px]:text-xl" />
           <span>Co-Founder</span>
         </div>
-        <div className="flex items-center gap-x-2">
-          <MdOutlineEmail className="mt-1 text-xl" />
+        <div className="flex items-center gap-x-2 text-base min-[1600px]:text-lg">
+          <MdOutlineEmail className="mt-1 min-[1600px]:text-xl" />
           <span>{email}</span>
         </div>
-        <div className="flex items-center gap-x-2">
-          <MdOutlineCall className="mt-1 text-xl" />
+        <div className="flex items-center gap-x-2 text-base min-[1600px]:text-lg">
+          <MdOutlineCall className="mt-1 min-[1600px]:text-xl" />
           <span>+91 12345 67891</span>
         </div>
       </div>

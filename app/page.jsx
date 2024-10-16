@@ -18,37 +18,37 @@ const App = () => {
     password: passwords?.password,
   });
 
-    useEffect(() => {
-      const video = document.createElement("video");
-      video.autoplay = false;
-      video.muted = true;
-      video.controls = true;
-      const source = document.createElement("source");
-      source.src = "/main-video.mp4";
-      let videoElement = document.getElementById(`video-container`);
-      if (!videoElement.innerHTML.includes("main-video")) {
-        video.appendChild(source);
-        document.getElementById(`video-container`).appendChild(video);
-      }
-    }, []);
+  useEffect(() => {
+    const video = document.createElement("video");
+    video.autoplay = false;
+    video.muted = true;
+    video.controls = true;
+    const source = document.createElement("source");
+    source.src = "/main-video.mp4";
+    let videoElement = document.getElementById(`video-container`);
+    if (!videoElement.innerHTML.includes("main-video")) {
+      video.appendChild(source);
+      document.getElementById(`video-container`).appendChild(video);
+    }
+  }, []);
 
   return (
     <div className="flex h-screen bg-darkPurple">
       <Toaster />
-      <div className="w-6/12 p-10 flex flex-col items-start justify-between h-full">
+      <div className="w-full md:w-6/12 p-8 min-[1600px]:p-10 flex flex-col items-start justify-between h-full">
         <Image
           src={logo}
           alt="Logo"
           width={1000}
           height={1000}
-          className="w-[10vw] invert"
+          className=" w-[32vw] md:w-[10vw] invert"
         />
-        <div className="w-full px-2">
-          <h2 className="text-white text-5xl leading-[60px] font-semibold">
+        <div className="w-full md:px-2">
+          <h2 className="text-white text-[26px] md:text-4xl min-[1600px]:text-5xl leading-[34px] md:leading-[42px] min-[1600px]:leading-[60px] font-semibold">
             Welcome to <br />
             Prowiz Analytics Portfolio
           </h2>{" "}
-          <h6 className="text-gray-300 text-2xl mt-3 mb-9">
+          <h6 className="text-gray-300 md:text-xl min-[1600px]:text-2xl mt-1 md:mt-2 min-[1600px]:mt-3 mb-6 md:mb-9">
             Please login here to continue
           </h6>
           <div className="flex flex-col my-5 text-gray-200">
@@ -66,7 +66,7 @@ const App = () => {
               }}
               type="text"
               placeholder="Enter Username"
-              className="bg-transparent w-8/12 outline-none border border-gray-300 px-4 py-2 rounded-lg min-[1600px]:text-lg"
+              className="bg-transparent md:w-8/12 outline-none border border-gray-300 px-4 py-2 rounded-lg min-[1600px]:text-lg"
             />
           </div>
           <label
@@ -75,7 +75,7 @@ const App = () => {
           >
             Password
           </label>
-          <div className="w-8/12 relative mt-1.5">
+          <div className="md:w-8/12 relative mt-1.5">
             <input
               type={showPassword ? "text" : "password"}
               id="password"
@@ -108,16 +108,19 @@ const App = () => {
                 toast.error("Invalid Credentials");
               }
             }}
-            className="text-white bg-newBlue mt-8 w-8/12 py-2.5 min-[1600px]:py-3 min-[1600px]:text-xl font-semibold rounded-lg"
+            className="text-white bg-newBlue mt-8 w-full md:w-8/12 py-2.5 min-[1600px]:py-3 min-[1600px]:text-xl font-semibold rounded-lg"
           >
             Login
           </button>
         </div>
         <div className="py-10"></div>
       </div>
-      <div className="w-6/12 relative p-[3vw] flex flex-col items-center justify-center bg-gradient-to-br from-gradientMain/50 from-[50%] to-black/50 h-full">
+      <div className="w-6/12 hidden relative p-[3vw] md:flex flex-col items-center justify-center bg-gradient-to-br from-gradientMain/50 from-[50%] to-black/50 h-full">
         <div className="w-11/12 flex items-center justify-center rounded-[10px] bg-white p-8">
-          <div id={`video-container`} className="shadow-xl shadow-gray-400 z-50"></div>
+          <div
+            id={`video-container`}
+            className="shadow-xl shadow-gray-400 z-50"
+          ></div>
         </div>
         <Image
           src="/login bg.png"
