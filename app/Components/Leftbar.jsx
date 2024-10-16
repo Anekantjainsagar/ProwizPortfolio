@@ -52,7 +52,11 @@ const Leftbar = () => {
                   <span className="text-2xl">{e?.icon}</span>
                   <p>{e?.title}</p>
                 </div>
-                {pathname != "/home" &&
+                {!(
+                  pathname == "/home" ||
+                  pathname == "/agents" ||
+                  pathname == "/about"
+                ) &&
                   e?.routes?.map((data, i) => {
                     return (
                       <div
